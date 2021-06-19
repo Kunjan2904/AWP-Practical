@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Practical 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <h2>Student Information:</h2>
+	<hr><br>
+    <div ng-controller="myController">
+        First Name: <b> {{student.firstName}} </b><br />
+        Last Name: <b> {{student.lastName}} </b>
+    </div>
+    <script>
+         var ngApp = angular.module('myApp', []);
+        
+        ngApp.controller('myController', function ($scope) {
+            $scope.student = { firstName: 'Kunjan', lastName: 'Patel' };
+        });
+    </script>
+</body>
+</html>
