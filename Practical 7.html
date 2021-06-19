@@ -1,0 +1,72 @@
+<html ng-app="myApp"> 
+	<head> 
+	<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"> 
+	</script> 
+		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"> 
+	</script> 
+	</head> 
+	<body> 
+		
+		<script type="text/ng-template"
+				id="first.html"> 
+			<h1>First</h1> 
+			
+			<h3>{{message}}</h3> 
+		</script> 
+		<script type="text/ng-template"
+				id="second.html"> 
+			<h1>Second</h1> 
+			
+			<h3>{{message}}</h3> 
+		</script> 
+		<script type="text/ng-template"
+				id="third.html"> 
+			<h1>Third</h1> 
+			
+			<h3>{{message}}</h3> 
+		</script> 
+		
+		<a href="#/">First</a> 
+		<a href="#/second">Second</a> 
+		<a href="#/third">Third</a> 
+		
+		<div ng-view></div> 
+		<script> 
+			var app = angular.module('myApp', []); 
+			var app = angular.module('myApp', ['ngRoute']); 
+			app.config(function($routeProvider) { 
+			$routeProvider 
+
+			.when('/', { 
+			templateUrl : 'first.html', 
+			controller : 'FirstController'
+			}) 
+
+			.when('/second', { 
+			templateUrl : 'second.html', 
+			controller : 'SecondController'
+			}) 
+
+			.when('/third', { 
+			templateUrl : 'third.html', 
+			controller : 'ThirdController'
+			}) 
+
+			.otherwise({redirectTo: '/'}); 
+			}); 
+
+			
+			app.controller('FirstController', function($scope) { 
+			$scope.message = 'Hello from FirstController'; 
+			}); 
+
+			app.controller('SecondController', function($scope) { 
+			$scope.message = 'Hello from SecondController'; 
+			}); 
+
+			app.controller('ThirdController', function($scope) { 
+			$scope.message = 'Hello from ThirdController'; 
+			}); 
+		</script> 
+	</body> 
+</html> 
