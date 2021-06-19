@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical 1</title>
+	<script type="text/javascript">
+		
+		function over()
+		{
+			var x=document.getElementById("p1");
+			x.style.backgroundColor="red";
+		}
+		function out()
+		{
+			var x=document.getElementById("p1");
+			x.style.backgroundColor="white";
+		}
+		function display(){  
+        var x=document.getElementById('ch1');  
+        x.style.backgroundColor='lightblue';  
+        }  
+	
+</script>
+</head>
+<body onload="alert('onload even occurred!..')">
+	 <h1>Event Handling In JavaScript</h1>
+	 <button onclick="alert('onClick Event Occurred!')">Click Me..</button><br><br>
+	<h3 id="p1" onmouseover="over()" onmouseout = "out()">This is a Heading.</h3>
+	 Enter Anything<input type="text" id="ch1" onChange="display()"> 
+<form onsubmit="alert('form submitted successfully')"><br/><br/>
+Name:<input type="text" name="name">
+<input type="submit" value="Submit">
+</form>	 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
