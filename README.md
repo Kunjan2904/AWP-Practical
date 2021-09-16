@@ -1,4 +1,1 @@
-# AWP-Practical
-Advanced Web Programming(AWP) Semester-06 GTU 
-Silver Oak University
-Hello
+Hello I am Student of Aditya Silver Oak Institute of Technology
